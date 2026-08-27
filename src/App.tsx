@@ -1,5 +1,10 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import { RouterProvider } from "react-router";
+import router from "./router";
+import "./App.css";
+
 const App = () => {
-  return <h1>Hello world</h1>
+  return <RouterProvider router={router} />
 }
 
 export default App;
