@@ -29,7 +29,7 @@
     transition: color 0.25s ease, transform 0.25s ease;
 }
 .logo:hover{
-    color: #0d6efd;
+    color: var(--accent-color,#4f8cff);
     transform: translateY(-1px);
 }
 .menu {
@@ -48,15 +48,15 @@
     transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
 }
 .navLink.active {
-    color: #0d6efd;
-    background: rgba(13, 110, 253, 0.1);
+    color: var(--accent-color,#4f8cff);
+    background: var(--accent-color-light,#4f8dff6b);
 }
 .navLink.active::after {
     width: 55%;
 }
 .navLink:hover {
-    color: #0d6efd;
-    background: rgba(13, 110, 253, 0.08);
+    color: var(--accent-color,#4f8cff);
+    background: var(--accent-color-light,#4f8dff6b);
     transform: translateY(-2px);
 }
 .navLink::after {
@@ -66,7 +66,7 @@
     bottom: 4px;
     width: 0;
     height: 2px;
-    background: #0d6efd;
+    background: var(--accent-color,#4f8cff);
     border-radius: 10px;
     transform: translateX(-50%);
     transition: width 0.25s ease;
@@ -90,8 +90,8 @@
     transition: color 0.25s ease, background-color 0.25s ease;
 }
 .menuButton:hover {
-    color: #0d6efd;
-    background: rgba(13, 110, 253, 0.08);
+    color: var(--accent-color,#4f8cff);
+    background: var(--accent-color-light,#4f8dff6b);
 }
 .menuButton svg {
     display: block;
