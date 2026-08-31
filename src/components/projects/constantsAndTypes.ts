@@ -1,3 +1,4 @@
+import React from "react";
 import projects from "./projects";
 
 export const techAndPackages = [
@@ -59,7 +60,7 @@ export interface FetchProjectsDataParams{
     search?: string,
 }
 
-const fetchProjectsData = ({
+export const fetchProjectsData = ({
     page=1, limit=6, sortBy="desc", projectType="all", repoType="all", previewType="all",
     techAndPackage="all", search="",
 }: FetchProjectsDataParams) => {
@@ -90,3 +91,10 @@ const fetchProjectsData = ({
 }
 
 export type InitialStateType = ReturnType<typeof fetchProjectsData>;
+export type ActionType = {type:"HANDLE_CHANGE"|"PAGINATE"|"RESET",payload:any};
+export type HandleChange = (name:string,value:string) => void;
+export type HandlePaginationType = (param:"next"|"prev") => void;
+export type ChangeEventType = React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
+export type HandleChangeEventType = (e:ChangeEventType) => void;
+export type FilterNames = "sortBy" | "projectType" | "repoType" | "previewType" | "techAndPackage" | "search";
+export type NestedArrayType<T,U> = readonly (readonly [T,U])[]
