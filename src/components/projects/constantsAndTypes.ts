@@ -1,8 +1,38 @@
-const techAndPackages = [
+import projects from "./projects";
+
+export const techAndPackages = [
     
 ] as const;
-
 export type TechAndPackagesOptionsType = typeof techAndPackages[number] | "all";
+
+export const sortTypeOptions = [
+    ["desc","Latest First"], ["asc","Oldest First"]
+] as const;
+export type SortTypeOptionsType = typeof sortTypeOptions[number][0];
+
+export const projectTypeOptions = [
+    ["all","All"], ["highlighted","Show Highlighted"], ["normal","Show Normal"]
+] as const;
+export type ProjectTypeOptionsType = typeof projectTypeOptions[number][0];
+
+export const repoTypeOptions = [
+    ["all","All"], ["public","Public Repository"], ["private","Private Repository"]
+] as const;
+export type RepoTypeOptionsType = typeof repoTypeOptions[number][0];
+
+export const previewTypeOptions = [
+    ["all","All"], ["available","Available"], ["not-available","Not Available"]
+] as const;
+export type PreviewTypeOptionsType = typeof previewTypeOptions[number][0];
+
+export const techAndPackagesTypeOptions: [TechAndPackagesOptionsType,number][] = (() => {
+    const mapItems = new Map<TechAndPackagesOptionsType,number>();
+    const items = projects.flatMap((item) => item.techAndPackages);
+    items.forEach((item) => {
+        mapItems.set(item, (mapItems.get(item) || 0) + 1);
+    });
+    return Array.from(mapItems.entries()).sort((a, b) => b[1] - a[1]);
+})();
 
 export interface Project{
     id: number,
@@ -17,3 +47,46 @@ export interface Project{
     isHighlighted: boolean,
     isPrivateRepo: boolean,
 }
+
+export interface FetchProjectsDataParams{
+    page?: number,
+    limit?: number,
+    sortBy?: SortTypeOptionsType,
+    projectType?: ProjectTypeOptionsType,
+    repoType?: RepoTypeOptionsType,
+    previewType?: PreviewTypeOptionsType,
+    techAndPackage?: TechAndPackagesOptionsType,
+    search?: string,
+}
+
+const fetchProjectsData = ({
+    page=1, limit=6, sortBy="desc", projectType="all", repoType="all", previewType="all",
+    techAndPackage="all", search="",
+}: FetchProjectsDataParams) => {
+    let data = [...projects];
+    data.sort((a,b) => sortBy === "desc" ? b.id - a.id : a.id - b.id);
+    if(projectType !== "all"){
+        data = data.filter(item => item.isHighlighted === (projectType === "highlighted"));
+    }
+    if(repoType !== "all"){
+        data = data.filter(item => item.isPrivateRepo === (repoType === "private"));
+    }
+    if(previewType !== "all"){
+        data = data.filter(item => (item.livePreview !== null) === (previewType === "available"));
+    }
+    if(techAndPackage !== "all"){
+        data = data.filter(item => item.techAndPackages.includes(techAndPackage));
+    }
+    if(search !== ""){
+        const searchTerm = search.trim().toLowerCase();
+        data = data.filter(item => item.title.toLowerCase().includes(searchTerm));
+    }
+    const offset = (page - 1) * limit;
+    return {
+        filteredProjects: data.slice(offset,offset+limit),
+        page,limit,totalRecords: data.length,
+        sortBy,projectType,repoType,previewType,techAndPackage,search,
+    }
+}
+
+export type InitialStateType = ReturnType<typeof fetchProjectsData>;
