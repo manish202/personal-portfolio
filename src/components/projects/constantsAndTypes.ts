@@ -2,7 +2,7 @@ import React from "react";
 import projects from "./projects";
 
 export const techAndPackages = [
-    
+    'html', 'css', 'javascript', 'jquery', 
 ] as const;
 export type TechAndPackagesOptionsType = typeof techAndPackages[number] | "all";
 
