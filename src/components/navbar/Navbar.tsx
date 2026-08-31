@@ -38,6 +38,7 @@ const Navbar = () => {
         }
     },[location.hash]);
     useEffect(() => {
+        if (location.pathname !== "/") return;
         const observer = new IntersectionObserver((entries) => {
             if (isNavigating.current) return;
             // multiple section ek sath ui mai aa sakte hai to random order mil sakta hai.
@@ -59,7 +60,7 @@ const Navbar = () => {
         return () => {
             observer.disconnect();
         }
-    },[]);
+    },[location.pathname]);
     return (
         <header className={styles.navbarWrapper}>
             <nav className={`container ${styles.navbar}`}>
