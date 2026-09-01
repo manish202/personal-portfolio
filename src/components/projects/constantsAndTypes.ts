@@ -4,7 +4,8 @@ import projects from "./projects";
 export const techAndPackages = [
     'html', 'css', 'javascript', 'jquery', 'bootstrap', 'owl-carousel', 'aos.js', 'okzoom.js', 'php',
     'anime.js', 'svg', 'swiper.js', 'mysql', 'react', 'react-dom', 'react-router-dom', 'react-scripts',
-    'gh-pages',
+    'gh-pages', 'react-toastify', '@emotion/react', '@emotion/styled', '@mui/icons-material',
+    '@mui/material', 'firebase', 
 ] as const;
 export type TechAndPackagesOptionsType = typeof techAndPackages[number] | "all";
 
