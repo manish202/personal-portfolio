@@ -5,7 +5,8 @@ export const techAndPackages = [
     'html', 'css', 'javascript', 'jquery', 'bootstrap', 'owl-carousel', 'aos.js', 'okzoom.js', 'php',
     'anime.js', 'svg', 'swiper.js', 'mysql', 'react', 'react-dom', 'react-router-dom', 'react-scripts',
     'gh-pages', 'react-toastify', '@emotion/react', '@emotion/styled', '@mui/icons-material',
-    '@mui/material', 'firebase', 
+    '@mui/material', 'firebase', 'react-cookie', 'bcryptjs', 'node', 'express', 'mongodb', 'mongoose',
+    'jsonwebtoken', 'cors', 'dotenv', 
 ] as const;
 export type TechAndPackagesOptionsType = typeof techAndPackages[number] | "all";
 
