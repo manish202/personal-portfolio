@@ -6,7 +6,7 @@ export const techAndPackages = [
     'anime.js', 'svg', 'swiper.js', 'mysql', 'react', 'react-dom', 'react-router-dom', 'react-scripts',
     'gh-pages', 'react-toastify', '@emotion/react', '@emotion/styled', '@mui/icons-material',
     '@mui/material', 'firebase', 'react-cookie', 'bcryptjs', 'node', 'express', 'mongodb', 'mongoose',
-    'jsonwebtoken', 'cors', 'dotenv', 'wordpress', 
+    'jsonwebtoken', 'cors', 'dotenv', 'wordpress', 'serve', 'next', 'vite', 
 ] as const;
 export type TechAndPackagesOptionsType = typeof techAndPackages[number] | "all";
 
