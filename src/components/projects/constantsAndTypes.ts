@@ -10,7 +10,9 @@ export const techAndPackages = [
     '@reduxjs/toolkit', 'body-parser', 'multer', '@babel/core', '@babel/preset-env', '@babel/preset-react',
     'babel-loader', 'css-loader', 'html-webpack-plugin', 'mini-css-extract-plugin', 'style-loader',
     'webpack', 'webpack-cli', 'webpack-dev-server', 'sass', 'typescript', 'git-github', 'cookie-parser',
-    'styled-components', '@auth0/auth0-react', 'react-icons', 
+    'styled-components', '@auth0/auth0-react', 'react-icons', 'redux', 'graphql', '@apollo/client',
+    'apollo-server', 'apollo-server-core', 'axios', 'hbs', 'joi', 'moment-timezone', 'xml-formatter',
+    'xmldom', 'xpath', 
 ] as const;
 export type TechAndPackagesOptionsType = typeof techAndPackages[number] | "all";
 
