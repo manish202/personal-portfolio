@@ -12,7 +12,10 @@ export const techAndPackages = [
     'webpack', 'webpack-cli', 'webpack-dev-server', 'sass', 'typescript', 'git-github', 'cookie-parser',
     'styled-components', '@auth0/auth0-react', 'react-icons', 'redux', 'graphql', '@apollo/client',
     'apollo-server', 'apollo-server-core', 'axios', 'hbs', 'joi', 'moment-timezone', 'xml-formatter',
-    'xmldom', 'xpath', 
+    'xmldom', 'xpath', 'bcrypt', 'knex', 'mysql2', 'node-cron', 'ejs', 'luxon', 'nodemailer', 'tabulator.js',
+    'xlsx.js', 'jspdf.js', 'mongoose-paginate-v2', 'express-session', 'passport', 'passport-google-oauth20',
+    'express-rate-limit', 'helmet', 'compression', 'express-ejs-layouts', 'express-minify-html-terser',
+    'express-validator', 'node-cache', 'slugify', 
 ] as const;
 export type TechAndPackagesOptionsType = typeof techAndPackages[number] | "all";
 
