@@ -15,7 +15,9 @@ export const techAndPackages = [
     'xmldom', 'xpath', 'bcrypt', 'knex', 'mysql2', 'node-cron', 'ejs', 'luxon', 'nodemailer', 'tabulator.js',
     'xlsx.js', 'jspdf.js', 'mongoose-paginate-v2', 'express-session', 'passport', 'passport-google-oauth20',
     'express-rate-limit', 'helmet', 'compression', 'express-ejs-layouts', 'express-minify-html-terser',
-    'express-validator', 'node-cache', 'slugify', 
+    'express-validator', 'node-cache', 'slugify', '@tanstack/react-query', '@tanstack/react-query-devtools',
+    'react-intersection-observer', 'react-router', 'cloudinary', 'stripe', 'winston', 'zod', 'react-google-charts',
+    '@tanstack/eslint-plugin-query', 
 ] as const;
 export type TechAndPackagesOptionsType = typeof techAndPackages[number] | "all";
 
