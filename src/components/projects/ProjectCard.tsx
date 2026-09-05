@@ -6,7 +6,7 @@ const ProjectCard = ({project,onViewMore}:{project:Project,onViewMore: () => voi
     return (
         <article className={styles.projectCard}>
             <div className={styles.thumbnail}>
-                <img src={`/images/projects/${project.images[0]}`} alt={project.title} loading="lazy"/>
+                <img src={`${import.meta.env.BASE_URL}/images/projects/${project.images[0]}`} alt={project.title} loading="lazy"/>
             </div>
             <div className={styles.cardContent}>
                 <h3>{project.title}</h3>

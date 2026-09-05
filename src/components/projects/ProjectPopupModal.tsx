@@ -37,7 +37,7 @@ const ProjectPopupModal = ({project,onClose}:{project:Project,onClose: () => voi
                             {project.images.map((image, index) => (
                                 <SwiperSlide key={image}>
                                     <img
-                                        src={`/images/projects/${image}`}
+                                        src={`${import.meta.env.BASE_URL}/images/projects/${image}`}
                                         alt={`${project.title} screenshot ${index + 1}`}
                                         className={styles.sliderImage}
                                     />
