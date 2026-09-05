@@ -7,6 +7,7 @@ import {
 import ProjectsFilters from "./ProjectsFilters";
 import ProjectsContainer from "./ProjectsContainer";
 import Pagination from "./Pagination";
+import SectionHeading from "../sectionHeading/sectionHeading";
 
 const initialState: InitialStateType = fetchProjectsData({});
 
@@ -36,11 +37,7 @@ const AllProjectsSection: React.FC = () => {
     return (
         <section id="projects" className={`min-vh-100 ${styles.projects}`}>
             <div className="container pt-5">
-                <div className={`${styles.sectionHeading} mb-1`}>
-                    <span>My Entire Journey</span>
-                    <h2>All Projects</h2>
-                    <div className={styles.headingLine}></div>
-                </div>
+                <SectionHeading span="My Entire Journey" h2="All Projects" />
                 <ProjectsFilters state={state} handleChange={handleChange} reset={reset} resetInput={resetInput} />
                 {state.totalRecords > 0 ? (<ProjectsContainer filteredProjects={state.filteredProjects} />):(
                     <div className="row text-center">
