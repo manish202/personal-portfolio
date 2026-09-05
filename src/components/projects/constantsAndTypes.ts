@@ -17,7 +17,10 @@ export const techAndPackages = [
     'express-rate-limit', 'helmet', 'compression', 'express-ejs-layouts', 'express-minify-html-terser',
     'express-validator', 'node-cache', 'slugify', '@tanstack/react-query', '@tanstack/react-query-devtools',
     'react-intersection-observer', 'react-router', 'cloudinary', 'stripe', 'winston', 'zod', 'react-google-charts',
-    '@tanstack/eslint-plugin-query', 
+    '@tanstack/eslint-plugin-query', 'connect-mongo', 'sequelize', 'socket.io', '@tailwindcss/postcss',
+    'postcss', 'tailwindcss', '@base-ui/react', '@hookform/resolvers', 'argon2', 'class-variance-authority',
+    'clsx', 'date-fns', 'drizzle-orm', 'drizzle-kit', 'lucide-react', 'react-day-picker', 'react-hook-form',
+    'shadcn', 'tailwind-merge', 'tw-animate-css'
 ] as const;
 export type TechAndPackagesOptionsType = typeof techAndPackages[number] | "all";
 
