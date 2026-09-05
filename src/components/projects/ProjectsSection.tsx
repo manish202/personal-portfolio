@@ -3,17 +3,14 @@ import ProjectsContainer from "./ProjectsContainer";
 import projects from "./projects";
 import { Link } from "react-router";
 import { FaArrowRight } from "react-icons/fa";
+import SectionHeading from "../sectionHeading/sectionHeading";
 
 const ProjectsSection = () => {
-    const highlightedProjects = projects.filter((item) => item.isHighlighted);
+    const highlightedProjects = projects.filter((item) => item.isHighlighted).sort((a,b) => b.id - a.id);
     return (
         <section id="projects" className={`min-vh-100 ${styles.projects}`}>
             <div className="container">
-                <div className={styles.sectionHeading}>
-                    <span>What I've built</span>
-                    <h2>Projects</h2>
-                    <div className={styles.headingLine}></div>
-                </div>
+                <SectionHeading span="What I've built" h2="Projects" />
                 <ProjectsContainer filteredProjects={highlightedProjects} />
                 <div className={styles.viewMoreWrapper}>
                     <Link to="/all_projects" className={styles.viewMoreButton}>

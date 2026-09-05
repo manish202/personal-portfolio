@@ -7,6 +7,7 @@ import {
 } from "react-icons/si";
 import { PiFileSvg } from "react-icons/pi";
 import styles from "./Skills.module.css";
+import SectionHeading from "../sectionHeading/sectionHeading";
 
 type SkillType = {name:string, icon:any, level?: "Basic" | "Medium" | null}
 type SkillCategoryProps = {title:string, skills:SkillType[]}
@@ -69,11 +70,7 @@ const SkillsSection = () => {
     return (
         <section id="skills" className={`min-vh-100 ${styles.skills}`}>
             <div className="container">
-                <div className={styles.sectionHeading}>
-                    <span>My technical expertise</span>
-                    <h2>Skills</h2>
-                    <div className={styles.headingLine}></div>
-                </div>
+                <SectionHeading span="My technical expertise" h2="Skills" />
                 <SkillCategory title="Frontend" skills={frontendSkills}/>
                 <SkillCategory title="Backend" skills={backendSkills}/>
                 <SkillCategory title="Tools" skills={tools}/>

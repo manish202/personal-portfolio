@@ -1,5 +1,6 @@
 import { FaCode, FaServer, FaDatabase, FaLaptopCode } from "react-icons/fa";
 import styles from "./About.module.css";
+import SectionHeading from "../sectionHeading/sectionHeading";
 
 const highlights = [
     {
@@ -28,11 +29,7 @@ const AboutSection = () => {
     return (
         <section id="about" className={`min-vh-100 ${styles.about}`}>
             <div className="container">
-                <div className={styles.sectionHeading}>
-                    <span>Get to know me</span>
-                    <h2>About Me</h2>
-                    <div className={styles.headingLine}></div>
-                </div>
+                <SectionHeading span="Get to know me" h2="About Me" />
                 <div className="row align-items-center g-5">
                     <div className="col-lg-5">
                         <div className={styles.introduction}>

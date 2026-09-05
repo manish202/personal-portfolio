@@ -2,31 +2,6 @@
     padding-top: 60px;
     padding-bottom: 60px;
 }
-.sectionHeading {
-    text-align: center;
-    margin-bottom: 70px;
-}
-.sectionHeading span {
-    display: block;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--accent-color, #4f8cff);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-}
-.sectionHeading h2 {
-    font-size: clamp(2.2rem, 4vw, 3rem);
-    font-weight: 700;
-    margin: 0;
-}
-.headingLine {
-    width: 60px;
-    height: 3px;
-    margin: 15px auto 0;
-    background: var(--accent-color, #4f8cff);
-    border-radius: 10px;
-}
 .introduction {
     max-width: 550px;
 }
@@ -103,9 +78,6 @@
     margin: 0;
 }
 @media (max-width: 991px) {
-    .sectionHeading {
-        margin-bottom: 50px;
-    }
     .introduction {
         max-width: none;
     }
@@ -114,9 +86,6 @@
     .about {
         padding-top: 40px;
         padding-bottom: 40px;
-    }
-    .sectionHeading {
-        margin-bottom: 40px;
     }
     .introduction h3 {
         font-size: 1.7rem;
