@@ -13,7 +13,7 @@ const HeroSection = () => {
                             <span className={`${styles.ripple} ${styles.ripple3}`} />
                             <div className={styles.imageCircle}>
                                 <img
-                                    src={`${import.meta.env.BASE_URL}/images/manish-prajapati.jpg`}
+                                    src={`${import.meta.env.BASE_URL}images/manish-prajapati.jpg`}
                                     alt="Manish Prajapati"
                                     className={styles.profileImage}
                                     sizes="(max-width: 768px) 280px, 420px"
