@@ -17,7 +17,7 @@ const ProjectCard = ({project,onViewMore}:{project:Project,onViewMore: () => voi
                 </div>
                 <div className={styles.cardActions}>
                     <SourceCodeAndPreviewBtn project={project} />
-                    <button type="button" className={styles.detailsButton} onClick={onViewMore}>
+                    <button type="button" data-project-name={project.title} data-project-id={project.id} className={`view-more-btn ${styles.detailsButton}`} onClick={onViewMore}>
                         View More
                     </button>
                 </div>

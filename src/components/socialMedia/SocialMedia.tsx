@@ -40,7 +40,8 @@ const SocialMedia = ({hAlign}:{hAlign:string}) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className={styles.socialIcon}
+                    data-social-platform={social.label}
+                    className={`social-media-icon ${styles.socialIcon}`}
                 >
                     {social.icon}
                 </a>

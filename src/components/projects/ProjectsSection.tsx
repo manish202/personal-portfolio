@@ -13,7 +13,7 @@ const ProjectsSection = () => {
                 <SectionHeading span="What I've built" h2="Projects" />
                 <ProjectsContainer filteredProjects={highlightedProjects} />
                 <div className={styles.viewMoreWrapper}>
-                    <Link to="/all_projects" className={styles.viewMoreButton}>
+                    <Link to="/all_projects" id="view-all-projects" className={styles.viewMoreButton}>
                         View All {projects.length} Projects <FaArrowRight />
                     </Link>
                 </div>
